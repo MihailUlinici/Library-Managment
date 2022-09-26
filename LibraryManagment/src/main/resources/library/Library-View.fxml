@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="792.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LibraryController">
+   <children>
+      <TextField fx:id="bookName" layoutX="45.0" layoutY="106.0" prefHeight="25.0" prefWidth="209.0" promptText="Name" />
+      <TextField fx:id="authorName" layoutX="45.0" layoutY="167.0" prefHeight="25.0" prefWidth="209.0" promptText="Author" />
+      <ComboBox fx:id="categories" layoutX="45.0" layoutY="227.0" prefHeight="25.0" prefWidth="209.0" promptText="Category" />
+      <TableView fx:id="list" layoutX="331.0" layoutY="106.0" prefHeight="626.0" prefWidth="794.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="180.0" text="Id" />
+          <TableColumn fx:id="name" prefWidth="166.0" text="Name" />
+            <TableColumn fx:id="author" prefWidth="195.0" text="Author" />
+            <TableColumn fx:id="categoriesName" prefWidth="252.0" text="Category" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="900.0" layoutY="59.0" prefHeight="25.0" prefWidth="209.0" promptText="Search" />
+      <Button fx:id="add" layoutX="45.0" layoutY="292.0" mnemonicParsing="false" onAction="#addBook" prefHeight="25.0" prefWidth="53.0" text="Add" />
+      <Button fx:id="delete" layoutX="150.0" layoutY="292.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="64.0" text="Delete" />
+   </children>
+</AnchorPane>
